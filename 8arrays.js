@@ -30,10 +30,10 @@ myArray.unshift("keke")
 
 // shift() - удаляет первый элемент массива и возвращает его
 myArray.shift()
-console.log(myArray)
+// console.log(myArray)
 
 // forEach() - принимает анонимную функцию и применяет её каждому элементу
-myArray.forEach(el => console.log(el * 2))
+// myArray.forEach(el => console.log(el * 2))
 
 // map() - принимает анонимную функцию и применяет её каждому элементу, 
 // а также возвращает новый массив исходя из полученных результатов
@@ -41,5 +41,103 @@ myArray.forEach(el => console.log(el * 2))
 const trippleArr = myArray.map((el) => {
     return el * 3
 })
-console.log(trippleArr)
+// console.log(trippleArr)
 
+// console.log("-----------------------")
+const newArr = [1, 2, 3, 4, 5]
+delete newArr[0] // удаляет значение, но оставляет вместо него empty item
+newArr.splice(0, 1) // начинает удаление с укзанного индекса, затем идет к-во
+// удаляемых элементов и новые элементы, которые встанут на место удаленного (опционально)
+// splice ещё и возвращает массив удаленных элементов
+// можно использовать отрицательный индекс
+// console.log("-----------------------")
+// slice при использовании отрицательного индекса возвращает результа от -2 до конца,
+// а не до начала как в Python
+const anotherArr = newArr.slice(0)
+// console.log(anotherArr)
+
+// console.log("-----------------------")
+// concat - создаёт новый массив, в который копирует данные из других массивов и доп. значения
+const newArrTwo = newArr.concat([1, 2], [3, 33], 44, {kek: "lol"})
+// console.log(newArrTwo)
+
+// console.log("-----------------------")
+// find - находит объект с определенным условием. Если true, то возвращает найденный 
+// элемент, если не нашел, то возвращает undefined
+let result = newArrTwo.find(function(value, index, newArrTwo) {
+    return value === 3
+})
+// console.log(result)
+
+// console.log("-----------------------")
+// filter - ищет один элемент, который заставит вернуть true
+let results = newArrTwo.filter(el => el >= 10)
+// console.log(results)
+
+// console.log("-----------------------")
+// sort - сортирует массив на месте, меняя в нём порядок элементов
+// по стандарту элементы преобразуются в строки при сравнении. Для строк применяется 
+// лексикографический порядок, и действительно выходит, что "2" > "15"
+const newArrThree = [2, 33, 1, 12, 99, 88.4, 13.1]
+// console.log(newArrThree.sort())
+// Чтобы была нормальная сортировка чисел то надо передавать функцию в 
+// качестве аргумента
+function compareNumeric(a, b) {
+    if (a > b) return 1;
+    if (a == b) return 0;
+    if (a < b) return -1;
+}
+// console.log(newArrThree.sort(compareNumeric))
+
+// На самом деле от функции сравнения требуется любое положительное число, 
+// чтобы сказать «больше», и отрицательное число, чтобы сказать «меньше».
+// Это позволяет писать более короткие функции:
+
+// [1, -2, 15, 2, 0, 8].sort(function(a, b) {
+//   alert( a + " <> " + b );
+//   return a - b;
+// });
+// arr.sort(function(a, b) { return a - b; });
+
+// console.log("-----------------------")
+// localeCompare - сортирует строки
+let countries = ['Österreich', 'Andorra', 'Vietnam']
+countries.sort((a, b) => a.localeCompare(b))
+
+// console.log("-----------------------")
+// reverse - меняет порядок элементов на обратный
+// console.log(newArrThree.reverse())
+
+// console.log("-----------------------")
+// split - разбивает строку на массив по заданному разделителю
+let names = "Kimmy, Keisha, India"
+let arr4 = names.split(", ") // запята с пробелом, это не ошибка
+let arr5 = names.split("") // разбивка по каждому символу
+
+// console.log("-----------------------")
+// join - объединяет массив в строку
+let names2 = arr5.join("")
+
+// console.log("-----------------------")
+// reduce - используется для вычисления единого значения на основе всего массива
+let value = [1, 2, 3, 4].reduce(function(accumulator, item, index, array) {
+    // 
+}, [0])
+// Функция применяется по очереди ко всем элементам массива и "переносит" свой 
+// результат на следующий вызов
+// accumulator – результат предыдущего вызова этой функции, равен initial при 
+// первом вызове (если передан initial),
+// item – очередной элемент массива,
+// index – его позиция,
+// array – сам массив.
+// при отсутствии initial в качестве первого значения берётся первый элемент массива, 
+// а перебор стартует со второго.
+let arr6 = [1, 3, 5, 2, 9]
+let result2 = arr6.reduce((init, curr_val) => init + curr_val, 0)
+// reduceRight - работает точно также, только справа налево
+
+// console.log("-----------------------")
+// isArray - массивы не образуют отдельный тип данных, поэтому их тяжело отличить от obj
+// И для определения массива используется метод isArray
+// console.log(Array.isArray({})) - false
+// console.log(Array.isArray([])) - true

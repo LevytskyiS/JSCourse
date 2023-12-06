@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="elem">
+        <div id="elem-content">Element</div>
+    </div>
+
+    <ul>
+        <li>A</li>
+        <li>B</li>
+        <li>C</li>
+        <li>D</li>
+    </ul>
+    
+    <script>
+        // 1
+        // alert(document.body.parentNode === document.documentElement);
+        // alert(document.head.nextSibling);
+        // alert(document.body.previousSibling);
+        
+        // 2
+        let elem = document.getElementById("elem");
+        elem.style.background = "red";
+        // alert(elem.innerText)
+
+        // 3
+        // let ulElems = document.querySelectorAll("ul > li:last-child");
+        // let ulElems = document.querySelectorAll("ul > li");
+        // for (let elem of ulElems) {
+        //     alert(elem.innerHTML);
+        // }
+
+        // 4
+        document.body.innerHTML = "<b>test</b>";
+        alert(document.body.innerHTML)
+    </script>
+</body>
+</html>
