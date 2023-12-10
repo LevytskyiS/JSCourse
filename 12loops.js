@@ -67,3 +67,35 @@ const myString = "Hey"
 for (const letter of myString) {
     console.log(letter)
 }
+
+// Прерывание цикла - break
+let someNum = 0
+
+while (true) {
+    if (someNum >= 10) break;
+    someNum++;
+    // console.log(someNum);
+}
+
+// Переход к следующей итерации - continue
+for (let i = 0; i <= 10; i++) {
+    if (i % 2 == 0) continue
+    else console.log(i)
+
+}
+
+// Выход из вложенного цикла на самый верх
+// labelName: for (...) {
+//   ...
+// }
+// Вызов break <labelName> в цикле ниже ищет ближайший внешний цикл с 
+// такой меткой и переходит в его конец.
+// outer: for (let i = 0; i < 3; i++) {
+//   for (let j = 0; j < 3; j++) {
+//     let input = prompt(`Значение на координатах (${i},${j})`, '');
+//     // если пустая строка или Отмена, то выйти из обоих циклов
+//     if (!input) break outer; // (*)
+//     // сделать что-нибудь со значениями...
+//   }
+// }
+// alert('Готово!');

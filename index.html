@@ -18,6 +18,8 @@
         <li>D</li>
     </ul>
     
+    <input id="elembtn" type="button" value="Click on me">
+
     <script>
         // 1
         // alert(document.body.parentNode === document.documentElement);
@@ -37,8 +39,18 @@
         // }
 
         // 4
-        document.body.innerHTML = "<b>test</b>";
-        alert(document.body.innerHTML)
-    </script>
+        // document.body.innerHTML = "<b>test</b>";
+        // alert(document.body.innerHTML)
+
+        // 5
+        // elembtn.onclick = function() {
+        //     alert("Thnx")
+        // }
+        // OR 
+        function thnxFn() {
+            alert("Thnx")
+        }
+        elembtn.onclick = thnxFn
+</script>
 </body>
 </html>
