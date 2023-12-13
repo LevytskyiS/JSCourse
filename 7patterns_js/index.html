@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Пример по делегированию прослушивания событий:
+    вешаем прослушиватель на родительский класс, но обрабатываем действие, 
+    если событие случится на детях -->
+    <!-- <div class="container js-container">
+        <div class="box js-box item-red" data-color="red" style="background-color: red; width: 100px; height: 100px; margin-bottom: 10px;"></div>
+        <div class="box js-box item-red" data-color="green" style="background-color: green; width: 100px; height: 100px; margin-bottom: 10px;"></div>
+        <div class="box js-box item-red" data-color="black" style="background-color: black; width: 100px; height: 100px; margin-bottom: 10px;"></div>
+    </div> -->
+
+    <!-- Крестики-нолики -->
+    <h1 class="js-winner">Last Winner</h1>
+    <div class="container">
+        <div class="content js-content"></div>
+    </div>
+    <script src="./script.js"></script>    
+</body>
+</html>
