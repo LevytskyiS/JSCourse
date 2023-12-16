@@ -1,4 +1,4 @@
-.container {
+/* .container {
     display: flex;
     margin: 100px 50px 50px 50px;
 }
@@ -21,4 +21,48 @@
     vertical-align: middle;
     transition: background .1s;
     user-select: none;
+} */
+
+/* cars */
+/* ul {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    list-style: none;
+    align-items: center;
+
+}
+
+li {
+    width: 200px;
+    height: 200px;
+    margin-top: 50px;
+}
+
+img {
+    width: 200px;
+    height: 150px;
+    display: block;
+}
+
+h2 {
+    margin: 0px;
+}
+
+.bg {
+    background-color: aliceblue;
+} */
+
+
+/* CDN, throttler, debounce */
+.valid {
+    border-color: green;
+}
+
+.invalid {
+    border-color: red;
+}
+
+input {
+    outline: 0;
 }

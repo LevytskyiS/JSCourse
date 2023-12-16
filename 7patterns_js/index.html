@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css"
+      rel="stylesheet"
+    />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Пример по делегированию прослушивания событий:
     вешаем прослушиватель на родительский класс, но обрабатываем действие, 
     если событие случится на детях -->
@@ -17,10 +21,24 @@
     </div> -->
 
     <!-- Крестики-нолики -->
-    <h1 class="js-winner">Last Winner</h1>
+    <!-- <h1 class="js-winner">Last Winner</h1>
     <div class="container">
         <div class="content js-content"></div>
-    </div>
-    <script src="./script.js"></script>    
-</body>
+    </div> -->
+
+    <!-- Cars -->
+    <!-- <ul class="js-container"></ul>
+    <script src="
+        https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js">
+    </script> -->
+
+    <!-- CDN Тема 7.2. -->
+    <!-- CDN скрипт должен быть подключен в конце body, но перед нашим скриптом -->
+    <!-- <input type="text" class="js-input">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    
+    <!-- Cats -->
+    <ul class="js-list"></ul>
+    <script src="./script.js"></script>
+  </body>
 </html>
